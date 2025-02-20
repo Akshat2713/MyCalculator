@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="15dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvInput"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="end"
+        android:layout_marginBottom="10dp"
+        android:background="#efefef"
+        android:gravity="end|bottom"
+        android:paddingHorizontal="20dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TableLayout
+            android:layout_weight="1"
+            android:id="@+id/keyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:ignore="NestedWeights">
+
+            <TableRow android:layout_weight="1"
+                android:gravity="center">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:onClick="onDigit"
+                    android:id="@+id/keyseven"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:backgroundTint="@color/grey"
+                    android:text="7"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:onClick="onDigit"
+                    android:id="@+id/keyeight"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:backgroundTint="@color/grey"
+                    android:text="8"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keynine"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@color/grey"
+                    android:onClick="onDigit"
+                    android:text="9"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keydivide"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@color/grey"
+                    android:onClick="onOperator"
+                    android:text="/"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+            </TableRow>
+
+            <TableRow android:layout_weight="1"
+                android:gravity="center">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keyfour"
+                    android:layout_margin="5dp"
+                    android:onClick="onDigit"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/grey"
+                    android:text="4"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keyfive"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:onClick="onDigit"
+                    android:backgroundTint="@color/grey"
+                    android:text="5"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keysix"
+                    android:layout_margin="5dp"
+                    android:onClick="onDigit"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/grey"
+                    android:text="6"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keymultiply"
+                    android:layout_margin="5dp"
+                    android:onClick="onOperator"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/grey"
+                    android:text="*"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+            </TableRow>
+
+            <TableRow android:layout_weight="1"
+                android:gravity="center">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keyone"
+                    android:layout_margin="5dp"
+                    android:onClick="onDigit"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/grey"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keytwo"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:onClick="onDigit"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/grey"
+                    android:text="2"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keythree"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:onClick="onDigit"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/grey"
+                    android:text="3"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keyminus"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:onClick="onClickMinus"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/grey"
+                    android:text="-"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+            </TableRow>
+
+            <TableRow android:layout_weight="1"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keydecimal"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/grey"
+                    android:onClick="onDecimal"
+                    android:text="."
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keyzero"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/grey"
+                    android:onClick="onZero"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keyCLR"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@color/grey"
+                    android:onClick="onClear"
+                    android:text="CLR"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keyplus"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/grey"
+                    android:onClick="onOperator"
+                    android:text="+"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+
+            </TableRow>
+
+            <TableRow android:layout_weight="1"
+                android:gravity="center">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/keyequals"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:onClick="onEqual"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/grey"
+                    android:text="="
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></androidx.appcompat.widget.AppCompatButton>
+
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+</LinearLayout>
